@@ -4,4 +4,4 @@ This is an introduction summarizing historical and current approaches to NLP, as
 
 ##  Portfolio Component 0
 
-Click [here](https://github.com/linusfackler/CS4395-NLP/blob/main/Getting%20Started/Overview%20of%20NLP.pdf) to view the full document as a pdf.
+Click [here](https://github.com/linusfackler/CS4395-NLP/blob/main/Overview%20of%20NLP/Overview%20of%20NLP.pdf) to view the full document as a pdf.
