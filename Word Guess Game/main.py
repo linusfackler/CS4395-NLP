@@ -2,79 +2,96 @@
 # CS4395.001
 # Dr. Mazidi
 #
-# This program...
+# This program lets the user guess a word from one of the top 50 most common nouns in the
+# user-input text. The text will first be tokenized and preprocessed.
 #
 
 import sys
-import os
 import nltk
-#from nltk.book import *
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-# from random import seed
 from random import randint
 
 
+# this is the main game function of the program
 def guessingGame(most_common):
-    points = 5
-    word = most_common[randint(0, 49)]
-    print("\n\n")
-    print(word)
+    points = 5          # start game with 5 points
+    word = most_common[randint(0, 49)]      # choose random word in range 0-49
+    print("\n")
     underscore = ""
     for i in range(len(word)):
-        underscore += '_'
+        underscore += '_'       # create string with _ for every letter
 
-    guesses = []
+    guesses = []                # list to keep track of guessed letters
 
-    while (points >= 0 ):
-        for x in underscore:
+    while (points >= 0 ):       # while score is not negative
+        for x in underscore:    # print current attempt (_ _ _ s _ for example)
             print(x, end=" ")
 
-        if underscore == word:
+        if underscore == word:  # if current attempt equals word -> user wins
             print("\nYou solved it!")
             print("\nCurrent score:", points)
             return
         
-        print("\n\nEnter a letter:")
+        print("\n\nEnter a letter: ", end="")
 
-        guess = input()
+        guess = input()         # get user input
 
-        if guess == "!":
-            exit()
+        while guess in guesses:         # if letter was already guessed
+            print("Already guessed this letter!")
+            print("Here are the letters you already guessed:")
+            print("Try again!\n")
+            guesses.sort()              # sort guesses list
+            for letter in guesses:      # print guesses list in alph. order
+                print(letter,end="  ")
+            print("\n")
+            guess = input()             # get new input
 
-        while guess in guesses:
-            print("Already guessed this letter! Try again")
+        # if guess is more than 1 letter or not a letter at all (except for !)
+        while guess != "!" and (len(guess) > 1 or not guess.isalpha()):
+            print("You can only guess single letters! (a-zA-z)")
+            print("Try again!")
+            print()
             guess = input()
 
-        guesses.append(guess)
+        if guess == "!":                # ! ends the game
+            print("\nThanks for playin!\n")
+            exit()
 
-        if guess in word:
-            points += 1
+        guesses.append(guess)           # if guess is allowed, add to list
+
+        if guess in word:               # if letter is in word
+            points += 1                 # add point to score
             print("Right! Score is", points)
 
+            # number of times letter is in string
             count_in_string = word.count(guess)
 
+            # index of first time letter is in string
             idx = word.index(guess)
 
+            # switch out underscore with correctly guessed letter
             underscore = underscore [:idx] + word[idx] + underscore[idx + 1:]
 
+            # if letter appears > 1 time
             if count_in_string > 1:
-                oldIndex = idx        # save original index
+                oldIndex = idx          # save original index
                 for i in range(count_in_string - 1):
                     idx = word[idx+1:].index(guess)
                     newIndex = oldIndex + idx + 1
                     underscore = underscore [:newIndex] + word[newIndex] + underscore[newIndex + 1:]
-        
+                    # switch out letter with underscore for every other appearance of letter in word
 
         else:
-            points -= 1
-            print("Sorry, guess again! Score is", points)
+            points -= 1             # wrong guess, subtract point from score
+            if points >= 0:         # if score is not negative yet
+                print("Sorry, guess again! Score is", points)
 
+    print("\nSorry, you lost!\n")   # if score is negative, user lost
+    print("The word was:", word)    # print word for user to see
 
-    
-
-
+# this function preprocesses the tokened Text
 def preprocess(tokenText):
         tokens = [t.lower() for t in tokenText] # tokenizing lower case
     
@@ -98,8 +115,6 @@ def preprocess(tokenText):
         print("Number of nouns:", len(nouns))
 
         return tokens, nouns
-
-
 
 def main():
 
@@ -142,10 +157,13 @@ def main():
         most_common = [n for n in dict(list(dic.items())[:50])]
 
 
-        print("Let's play a word guessing game!")
+        print("\n\nLet's play a word guessing game!")
+        print("\nEnter '!' to stop the game at any time!")
         while(True):
             guessingGame(most_common)
             print("\nGuess another word")
+    
+    exit()
 
 
 if __name__ == '__main__':
