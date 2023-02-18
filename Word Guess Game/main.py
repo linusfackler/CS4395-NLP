@@ -4,6 +4,9 @@
 #
 # This program lets the user guess a word from one of the top 50 most common nouns in the
 # user-input text. The text will first be tokenized and preprocessed.
+# The game starts with a score of 5 and the user gets to guess a letter. If the guessed letter is
+# in the word, the user will get 1 point. If not, 1 point will be deducted.
+# The game ends if the user enters '!' or the score falls below 0.
 #
 
 import sys
