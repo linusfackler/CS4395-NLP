@@ -1,8 +1,10 @@
-# Portfolio Chapter 5: Word Guess Game
+# Portfolio Chapter 8: Ngrams
 
-[Python File](https://github.com/linusfackler/CS4395-NLP/blob/main/Word%20Guess%20Game/main.py)
+[Python File - program 1](https://github.com/linusfackler/CS4395-NLP/blob/main/Ngrams/create_ngrams.py)
 |
-[Text File](https://github.com/linusfackler/CS4395-NLP/blob/main/Word%20Guess%20Game/anat19.txt)
+[Python File - program 2](https://github.com/linusfackler/CS4395-NLP/blob/main/Ngrams/ngram_prob.py)
+|
+[Narrative](https://github.com/linusfackler/CS4395-NLP/blob/main/Ngrams/Narrative.md)
 
 ## What the program does
 This program takes input files, processes the text, and creates unigrams and bigrams for each text. These are used to train an n-gram model to detect the language in a given text
