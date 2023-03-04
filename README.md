@@ -10,3 +10,4 @@ CS 4395.001 - Human Language Technologies
 |  02   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/Text%20Processing%20with%20Python">Portfolio Assignment 1</a>   |  Text Processing with Python    |
 |  03   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/Word%20Guess%20Game">Portfolio Chapter 5</a>   |  Word Guess Game    |
 |  04   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/WordNet">Portfolio Assignment</a>   |  WordNet    |
+|  05   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/Ngrams">Portfolio Chapter 8</a>   |  Ngrams    |
