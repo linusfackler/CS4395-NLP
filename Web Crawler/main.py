@@ -2,11 +2,9 @@
 # CS4395.001
 # Dr. Mazidi
 #
-# Portfolio Chapter 8: Ngrams
-# Program 1
+# Portfolio: Finding or Building a Corpus
 #
-# This program reads 3 input files, processes the text, and creates unigrams and bigrams for each text.
-# It then saves each dictionary as a pickle.
+# 
 #
 
 import requests
@@ -139,6 +137,13 @@ def create_tfidf(tf, idf):
 
     return tf_idf
 
+def mergeDictionaries(dict1, dict2):
+    new_dict = {**dict1, **dict2}
+    for key, value in new_dict.items():
+        if key in dict1 and key in dict2:
+            new_dict[key] = max(value, dict1[key])
+    return new_dict
+
 def main():
     starter_url = "https://www.loudersound.com/features/the-making-of-pink-floyds-dark-side-of-the-moon"
     url_file = 'urls.txt'
@@ -166,22 +171,28 @@ def main():
         tf_idfs.append(create_tfidf(tf, idf_dict))
 
     # tf-idf for each text
-    # combined_tfidfs = tf_idfs[0]
-    # for t in tf_idfs[1:]:
-    #     combined_tfidfs = combined_tfidfs | t
+    combined_tfidfs = tf_idfs[0]
+    for t in tf_idfs[1:]:
+        combined_tfidfs = mergeDictionaries(combined_tfidfs, t)
 
     # print(combined_tfidfs)
 
-    # weights = sorted(combined_tfidfs.items(), key=lambda x:x[1], reverse=True)
-    # print(weights)
-    # # print("25 most important words in all texts:", weights[:25])
+    weights = sorted(combined_tfidfs.items(), key=lambda x:x[1], reverse=True)
+    print("30 most important words in all texts:")
+    for w in weights[:30]:
+        temp = str(w)
+        temp = temp.replace('(', '')
+        temp = temp.replace(')', '')
+        temp = temp.replace(',', '')
+        t = temp.split()
+        print('{:>20}'.format(t[0]), '\t', t[1])
 
 
-    i = 0
-    for t in tf_idfs:
-        weights = sorted(t.items(), key=lambda x:x[1], reverse=True)
-        print("most important word in text ", i, ':', weights[:5])
-        i += 1
+    # i = 0
+    # for t in tf_idfs:
+    #     weights = sorted(t.items(), key=lambda x:x[1], reverse=True)
+    #     print("most important word in text ", i, ':', weights[:5])
+    #     i += 1
 
 if __name__ == '__main__':
     main()
