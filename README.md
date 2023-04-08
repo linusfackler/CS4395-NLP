@@ -14,4 +14,4 @@ CS 4395.001 - Human Language Technologies
 |  06   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/Sentence%20Parsing">Portfolio Assignment</a>   |  Sentence Parsing    |
 |  07   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/Web%20Crawler">Portfolio</a>   |  Finding or Building a Corpus    |
 |  08   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/Text%20Classification">Portfolio Assignment</a>   |   Text Classification    |
-
+|  09   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/ACL%20Paper">Portfolio</a>   |   Reading ACL Papers    |
