@@ -16,3 +16,4 @@ CS 4395.001 - Human Language Technologies
 |  08   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/Text%20Classification">Portfolio Assignment</a>   |   Text Classification    |
 |  09   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/ACL%20Paper">Portfolio</a>   |   Reading ACL Papers    |
 |  10   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/Chatbot">Project</a>   |   Chatbot    |
+|  11   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/Text%20Classification%202">Portfolio Assignment</a>   |   Text Classification 2  |
