@@ -17,3 +17,17 @@ CS 4395.001 - Human Language Technologies
 |  09   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/ACL%20Paper">Portfolio</a>   |   Reading ACL Papers    |
 |  10   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/Chatbot">Project</a>   |   Chatbot    |
 |  11   |  <a href="https://github.com/linusfackler/CS4395-NLP/tree/main/Text%20Classification%202">Portfolio Assignment</a>   |   Text Classification 2  |
+
+
+## Technical Skills
+Here are some of the technical skills included in this portfolio
+
+<p>
+<img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
+<img src="https://www.cs.princeton.edu/courses/archive/spring20/cos226/images/assignment-logos/600-by-400/wordnet.png" title="WordNet" alt="Wordnet" width="60" height="40"/>&nbsp;
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png" title="sklearn" alt="sklearn" width="60" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/pandas/pandas-original.svg" title="pandas" alt="pandas" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/numpy/numpy-original.svg" title="numpy" alt="numpy" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/tensorflow/tensorflow-original.svg" title="TensorFlow" alt="TensorFlow" width="40" height="40"/>&nbsp;
+</p>
+
